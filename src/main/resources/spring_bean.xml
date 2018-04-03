@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+">
+
+    <!--<context:annotation-config/>-->
+    <!--context:annotation-config namespaces содержит в себе описание-->
+    <!--общих бинов таких как CommonAnnotationBeanPostProcessor и другие и чтобы не писать их все,-->
+    <!-- есть annotation-config-->
+
+    <bean class="springcustom.DeprecatedClassBeanFactoryPostProcessor"/>
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+    <bean class="springcustom.ProfilingHandlerBeanPostProcessor"/>
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+    <bean class="springcustom.InjectRandomIntAnnotationBeanPostProcessor"/>
+    <bean class="springcustom.PostProxyInvokerContextListener"/>
+
+
+    <bean class="quoters.T1000" id="t1000"/>
+
+    <!--//закоменчено для BFPP-->
+    <!--<bean class="quoters.TerminatorQuoter" id="terminatorQuoter">-->
+    <!--<property name="message" value="i`ll be back"/>-->
+    <!--</bean>-->
+
+
+</beans>
